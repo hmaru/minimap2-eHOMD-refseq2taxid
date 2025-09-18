@@ -1,0 +1,836 @@
+HOMD.org Taxon Data::No Filter Applied Date: 2025-05-15			
+HMT-ID	Genus	Species	NCBI Taxon ID
+HMT-001	Bartonella	schoenbuchensis	165694
+HMT-002	Caulobacter	sp. HMT-002	712237
+HMT-003	Sphingomonas	glacialis	658225
+HMT-004	Sphingomonas	sp. HMT-004	712605
+HMT-005	Acinetobacter	lwoffii	28090
+HMT-006	Novosphingobium	humi	2282397
+HMT-007	Erythrobacter	tepidarius	60454
+HMT-008	Mogibacterium	vescum	86333
+HMT-010	Acinetobacter	radioresistens	40216
+HMT-011	Eikenella	sp. HMT-011	712272
+HMT-012	Kingella	sp. HMT-012	712319
+HMT-013	Neisseria	bacilliformis	267212
+HMT-014	Neisseria	oralis	1107316
+HMT-017	Anaerococcus	octavius	54007
+HMT-018	Neisseria	sp. HMT-018	712400
+HMT-019	Corynebacterium	accolens	38284
+HMT-020	Neisseria	sp. HMT-020	712401
+HMT-021	Streptococcus	vestibularis	1343
+HMT-022	Lautropia	mirabilis	47671
+HMT-023	Delftia	acidovorans	80866
+HMT-024	Schlegelella	thermodepolymerans	215580
+HMT-025	Leptothrix	sp. HMT-025	712353
+HMT-026	Schlegelella	aquatica	376175
+HMT-027	Cupriavidus	gilardii	82541
+HMT-028	Oryzomicrobium	terrae	1735038
+HMT-029	Treponema	vincentii	69710
+HMT-030	Corynebacterium	afermentans	38286
+HMT-031	Corynebacterium	amycolatum	43765
+HMT-032	Pseudomonas	sp. HMT-032	712508
+HMT-033	Corynebacterium	appendicis	163202
+HMT-034	Corynebacterium	aurimucosum	169292
+HMT-035	Haemophilus	paraphrohaemolyticus	736
+HMT-036	Haemophilus	sp. HMT-036	712310
+HMT-037	Stenotrophomonas	nitritireducens	83617
+HMT-038	Olsenella	uli	133926
+HMT-039	Bdellovibrio	sp. HMT-039	712185
+HMT-040	Desulfovibrio	sp. HMT-040	712259
+HMT-041	Desulfobulbus	oralis	712258
+HMT-042	Mogibacterium	timidum	35519
+HMT-043	Actinomyces	oris	0
+HMT-044	Campylobacter	sp. HMT-044	712200
+HMT-045	Alkalihalobacillus	clausii	79880
+HMT-046	Gemella	morbillorum	29391
+HMT-047	Corynebacterium	jeikeium	38289
+HMT-048	Paenibacillus	typhae	1174501
+HMT-049	Corynebacterium	kroppenstedtii	161879
+HMT-050	Corynebacterium	macginleyi	38290
+HMT-051	Limosilactobacillus	vaginalis	1633
+HMT-052	Limosilactobacillus	sp. HMT-052	671212
+HMT-053	Corynebacterium	minutissimum	38301
+HMT-054	Corynebacterium	pilbarense	1288393
+HMT-056	Streptococcus	sp. HMT-056	712620
+HMT-057	Streptococcus	sp. HMT-057	712621
+HMT-058	Streptococcus	sp. HMT-058	1458253
+HMT-059	Corynebacterium	propinquum	43769
+HMT-060	Corynebacterium	pseudodiphtheriticum	37637
+HMT-061	Streptococcus	infantis	712623
+HMT-062	Corynebacterium	simulans	146827
+HMT-063	Corynebacterium	singulare	161899
+HMT-064	Streptococcus	sp. HMT-064	712624
+HMT-066	Streptococcus	sp. HMT-066	712626
+HMT-070	Streptococcus	sp. HMT-070	1077464
+HMT-071	Streptococcus	oralis	1077464
+HMT-072	Corynebacterium	striatum	43770
+HMT-073	Streptococcus	australis	113107
+HMT-074	Streptococcus	sp. HMT-074	712631
+HMT-075	Ruminococcaceae [G1]	bacterium HMT-075	216572
+HMT-076	Staphylococcus	warneri	1292
+HMT-077	Corynebacterium	tuberculostearicum	38304
+HMT-078	Oribacterium	sp. HMT-078	652706
+HMT-079	Actinomyces	oris	0
+HMT-080	Butyrivibrio	sp. HMT-080	830
+HMT-081	Peptoanaerobacter	sp. HMT-081	186804
+HMT-082	Lachnoanaerobaculum	orale	979627
+HMT-083	Lachnoanaerobaculum	sp. HMT-083	1164882
+HMT-084	Kocuria	palustris	71999
+HMT-085	Ruminococcaceae [G2]	bacterium HMT-085	216572
+HMT-086	Lachnospiraceae [G7]	bacterium HMT-086	186803
+HMT-087	Micrococcus	luteus	1270
+HMT-088	Lachnospiraceae [G2]	bacterium HMT-088	186803
+HMT-089	Lachnoanaerobaculum	sp. HMT-089	1164882
+HMT-090	Butyrivibrio	sp. HMT-090	830
+HMT-091	Anaerovoracaceae [G2]	bacterium HMT-091	186804
+HMT-092	Neisseria	weaveri	28091
+HMT-093	Clostridiales [F1 G1]	bacterium HMT-093	186802
+HMT-094	Lachnospiraceae [G10]	bacterium HMT-094	186803
+HMT-095	Shuttleworthia	satelles	177972
+HMT-096	Lachnospiraceae [G2]	bacterium HMT-096	186803
+HMT-097	Moryella	sp. HMT-097	1213720
+HMT-098	Moraxella	nonliquefaciens	478
+HMT-099	Neisseria	macacae	496
+HMT-100	Lachnospiraceae [G3]	bacterium HMT-100	186803
+HMT-101	Neisseria	perflava	33053
+HMT-102	Oribacterium	sp. HMT-102	671214
+HMT-103	Anaerovoracaceae [G4]	bacterium HMT-103	186804
+HMT-104	Paracoccus	yeei	147645
+HMT-105	Anaerovoracaceae [G1]	infirmum	186804
+HMT-106	Peptoanaerobacter	yurii	186804
+HMT-107	Lachnoanaerobaculum	umeaense	617123
+HMT-108	Oribacterium	asaccharolyticum	1501332
+HMT-109	Peptoniphilus	harei	54005
+HMT-110	Parvimonas	sp. HMT-110	671230
+HMT-111	Parvimonas	micra	33033
+HMT-112	Peptostreptococcus	stomatis	341694
+HMT-113	Peptoniphilaceae [G1]	bacterium HMT-113	1570339
+HMT-114	Cutibacterium	granulosum	33011
+HMT-115	Serratia	marcescens	615
+HMT-116	Staphylococcus	capitis	29388
+HMT-117	Staphylococcus	cohnii	29382
+HMT-118	Dialister	invisus	218538
+HMT-119	Dialister	sp. HMT-119	712261
+HMT-120	Staphylococcus	haemolyticus	1283
+HMT-121	Anaeroglobus	geminatus	156456
+HMT-122	Megasphaera	micronuciformis	187326
+HMT-123	Anaeroglobus	massiliensis	1852379
+HMT-124	Selenomonas	artemidis	671224
+HMT-125	Selenomonas	flueggei	135080
+HMT-126	Selenomonas	sp. HMT-126	712528
+HMT-127	Staphylococcus	hominis	1290
+HMT-128	Staphylococcus	lugdunensis	28035
+HMT-129	Selenomonadaceae [G1]	bacterium HMT-129	1843491
+HMT-130	Selenomonas	noxia	135083
+HMT-131	Mitsuokella	sp. HMT-131	1321780
+HMT-132	Selenomonadaceae [G1]	bacterium HMT-132	1843491
+HMT-133	Selenomonas	sp. HMT-133	712529
+HMT-134	Selenomonas	sp. HMT-134	712530
+HMT-135	Selenomonadaceae [G1]	bacterium HMT-135	1843491
+HMT-136	Selenomonas	felix	713030
+HMT-138	Selenomonas	timonae	712532
+HMT-139	Selenomonas	dianae	135079
+HMT-141	Staphylococcus	pasteuri	45972
+HMT-142	Staphylococcus	pettenkoferi	170573
+HMT-144	Actinomyces	oris	0
+HMT-145	Selenomonadaceae [G1]	bacterium HMT-145	1843491
+HMT-146	Selenomonas	sp. HMT-146	712534
+HMT-147	Rothia	mucilaginosa	0
+HMT-148	Selenomonadaceae [G1]	bacterium HMT-148	1843491
+HMT-150	Selenomonadaceae [G1]	bacterium HMT-150	1843491
+HMT-151	Selenomonas	sputigena	69823
+HMT-152	Streptococcus	thermophilus	1308
+HMT-153	Klebsiella	aerogenes	548
+HMT-154	Moraxella	lincolnii	90241
+HMT-155	Selenomonadaceae [G1]	bacterium HMT-155	1843491
+HMT-156	Veillonella	nakazawae	0
+HMT-157	Veillonella	sp. HMT-157	0
+HMT-158	Veillonella	rogosae	423477
+HMT-160	Veillonella	dispar	39778
+HMT-161	Veillonella	parvula	29466
+HMT-163	Lachnospiraceae [G7]	bacterium HMT-163	186803
+HMT-164	Catonella	sp. HMT-164	712233
+HMT-165	Catonella	morbi	43997
+HMT-166	Johnsonella	sp. HMT-166	712318
+HMT-167	Peptococcus	sp. HMT-167	671215
+HMT-168	Peptococcus	sp. HMT-168	712426
+HMT-169	Actinomyces	oris	712116
+HMT-170	Actinomyces	sp. HMT-170	712117
+HMT-171	Actinomyces	oris	706438
+HMT-172	Schaalia	sp. HMT-172	712118
+HMT-173	Lawsonella	clevelandensis	1528099
+HMT-174	Neisseriaceae [G1]	bacterium HMT-174	481
+HMT-176	Actinomyces	naeslundii	1655
+HMT-178	Schaalia	hongkongensis	710238
+HMT-179	Actinomyces	timonensis	1288391
+HMT-180	Schaalia	sp. HMT-180	651609
+HMT-181	Schaalia	lingnae	114702
+HMT-182	Anoxybacillus	flavithermus	33934
+HMT-183	Peptidiphaga	sp. HMT-183	712888
+HMT-184	Corynebacterium	tuscaniense	302449
+HMT-185	Microbacterium	ginsengisoli	400772
+HMT-186	Microbacterium	sp. HMT-186	69366
+HMT-187	Peptoniphilus	grossensis	162289
+HMT-188	Rothia	aeria	172042
+HMT-189	Kocuria	atrinae	592377
+HMT-190	Arsenicicoccus	sp. HMT-190	229480
+HMT-191	Propionibacterium	acidifaciens	1410036
+HMT-192	Brooklawnia	sp. HMT-192	31957
+HMT-193	Cutibacterium	modestum	671223
+HMT-194	Arachnia	rubra	1547448
+HMT-195	Scardovia	wiggsiae	230143
+HMT-196	Enhydrobacter	aerosaccus	225324
+HMT-197	Kocuria	rhizophila	72000
+HMT-198	Alloscardovia	omnicolens	419015
+HMT-199	Lancefieldella	sp. HMT-199	712156
+HMT-200	Fusobacterium	vincentii	155615
+HMT-201	Fusobacterium	periodonticum	860
+HMT-202	Fusobacterium	polymorphum	76857
+HMT-203	Fusobacterium	sp. HMT-203	671211
+HMT-204	Fusobacterium	sp. HMT-204	848
+HMT-205	Fusobacterium	sp. HMT-205	710237
+HMT-206	Cloacibacterium	sp. HMT-206	501783
+HMT-207	Corynebacterium	gottingense	2041036
+HMT-208	Corynebacterium	bovis	36808
+HMT-209	Acidovorax	ebreus	721785
+HMT-211	Paenacidovorax	caeni	343013
+HMT-212	Pseudoleptotrichia	sp. HMT-212	712357
+HMT-213	Leptotrichia	hongkongensis	554406
+HMT-214	Leptotrichia	shahii	157691
+HMT-215	Pseudoleptotrichia	sp. HMT-215	712359
+HMT-216	Acidovorax	temperans	80878
+HMT-217	Pseudoleptotrichia	sp. HMT-217	712360
+HMT-218	Leptotrichia	sp. HMT-218	712361
+HMT-219	Pseudoleptotrichia	sp. HMT-219	652714
+HMT-221	Leptotrichia	sp. HMT-221	712362
+HMT-222	Leptotrichia	wadei	157687
+HMT-223	Leptotrichia	sp. HMT-223	712363
+HMT-224	Leptotrichia	hofstadii	157688
+HMT-225	Leptotrichia	sp. HMT-225	671213
+HMT-226	Treponema	sp. HMT-226	712715
+HMT-227	Treponema	sp. HMT-227	712716
+HMT-228	Treponema	sp. HMT-228	712717
+HMT-229	Arthrospira	platensis	118562
+HMT-230	Treponema	sp. HMT-230	712718
+HMT-231	Treponema	sp. HMT-231	712719
+HMT-232	Treponema	sp. HMT-232	712720
+HMT-233	Staphylococcus	schleiferi	1295
+HMT-234	Treponema	sp. HMT-234	712721
+HMT-235	Treponema	sp. HMT-235	712722
+HMT-236	Treponema	sp. HMT-236	712723
+HMT-237	Treponema	sp. HMT-237	712724
+HMT-238	Treponema	sp. HMT-238	712725
+HMT-239	Treponema	sp. HMT-239	712726
+HMT-240	Schaalia	sp. HMT-240	0
+HMT-241	Brochothrix	thermosphacta	2756
+HMT-242	Treponema	sp. HMT-242	712727
+HMT-243	Jeotgalicoccus	marinus	589010
+HMT-244	Roseomonas	gilardii	257708
+HMT-245	Roseomonas	mucosa	207340
+HMT-246	Treponema	sp. HMT-246	712728
+HMT-247	Treponema	sp. HMT-247	712729
+HMT-248	Fusobacterium	sp. HMT-248	848
+HMT-249	Treponema	sp. HMT-249	712730
+HMT-250	Treponema	sp. HMT-250	712731
+HMT-251	Treponema	sp. HMT-251	712732
+HMT-252	Treponema	sp. HMT-252	712733
+HMT-253	Treponema	sp. HMT-253	712734
+HMT-254	Treponema	sp. HMT-254	712735
+HMT-256	Treponema	sp. HMT-256	712737
+HMT-257	Treponema	sp. HMT-257	712738
+HMT-258	Treponema	sp. HMT-258	712739
+HMT-260	Treponema	sp. HMT-260	712740
+HMT-261	Segetibacter	aerophilus	670293
+HMT-262	Treponema	sp. HMT-262	712741
+HMT-263	Treponema	sp. HMT-263	712742
+HMT-264	Treponema	sp. HMT-264	712743
+HMT-265	Treponema	sp. HMT-265	712744
+HMT-266	Leptothrix	sp. HMT-266	88
+HMT-268	Treponema	sp. HMT-268	712745
+HMT-269	Treponema	sp. HMT-269	157
+HMT-270	Treponema	sp. HMT-270	671227
+HMT-271	Treponema	sp. HMT-271	712746
+HMT-272	Phocaeicola	abscessus	555313
+HMT-273	Porphyromonas	endodontalis	28124
+HMT-274	Paludibacteraceae [G1]	bacterium HMT-274	171549
+HMT-275	Porphyromonas	sp. HMT-275	712435
+HMT-276	Moraxella	sp. HMT-276	475
+HMT-277	Porphyromonas	sp. HMT-277	712436
+HMT-278	Porphyromonas	sp. HMT-278	712437
+HMT-279	Porphyromonas	pasteri	1583331
+HMT-280	Odoribacteraceae [G3]	bacterium HMT-280	200643
+HMT-281	Odoribacteraceae [G3]	bacterium HMT-281	200643
+HMT-282	Acinetobacter	junii	40215
+HMT-283	Porphyromonas	catoniae	41976
+HMT-284	Porphyromonas	sp. HMT-284	712439
+HMT-286	Tannerella	serpentiformis	712710
+HMT-288	Segatella	oulorum	28136
+HMT-289	Segatella	maculosa	439703
+HMT-290	Anaerococcus	sp. HMT-290	165779
+HMT-291	Prevotella	denticola	28129
+HMT-294	Anaerococcus	vaginimassiliensis	165779
+HMT-295	Anaerococcus	sp. HMT-295	165779
+HMT-297	Acinetobacter	johnsonii	40214
+HMT-298	Prevotella	histicola	470565
+HMT-299	Hoylesella	nanceiensis	425941
+HMT-300	Segatella	sp. HMT-300	712456
+HMT-301	Hoylesella	sp. HMT-301	712457
+HMT-302	Alloprevotella	rava	671218
+HMT-303	Hoylesella	pleuritidis	407975
+HMT-304	Prevotella	sp. HMT-304	712459
+HMT-305	Segatella	sp. HMT-305	712460
+HMT-306	Prevotella	vespertina	712461
+HMT-307	Segatella	salivae	228604
+HMT-308	Alloprevotella	sp. HMT-308	1283313
+HMT-309	Segatella	sp. HMT-309	712463
+HMT-311	Segatella	oris	28135
+HMT-312	Aerococcus	viridans	1377
+HMT-313	Prevotella	jejuni	652722
+HMT-314	Prevotella	sp. HMT-314	712464
+HMT-315	Hallella	sp. HMT-315	712465
+HMT-316	Haematobacter	missouriensis	366616
+HMT-317	Hoylesella	sp. HMT-317	652721
+HMT-318	Pedobacter	sp. HMT-318	84567
+HMT-319	Chryseobacterium	sp. HMT-319	59732
+HMT-320	Flavitalea	sp. HMT-320	1210116
+HMT-321	Pedobacter	sp. HMT-321	84567
+HMT-322	Riemerella	sp. HMT-322	34084
+HMT-325	Capnocytophaga	granulosa	45242
+HMT-326	Capnocytophaga	endodontalis	2708117
+HMT-327	Neisseriaceae [G1]	bacterium HMT-327	481
+HMT-328	Corynebacterium	mastitidis	161890
+HMT-329	Capnocytophaga	leadbetteri	327575
+HMT-330	Micavibrio	aeruginosavorus	349221
+HMT-331	Staphylococcus	auricularis	29379
+HMT-332	Capnocytophaga	bilenii	712213
+HMT-333	Corynebacterium	massiliense	441501
+HMT-337	Capnocytophaga	gingivalis	1017
+HMT-338	Capnocytophaga	sp. HMT-338	710239
+HMT-339	Janibacter	indicus	857417
+HMT-340	Brevibacterium	paucivorans	170994
+HMT-341	Corynebacterium	coyleae	53374
+HMT-342	Novosphingobium	panipatense	428991
+HMT-343	Achromobacter	xylosoxidans	85698
+HMT-344	Pseudomonas	luteola	47886
+HMT-345	Absconditicoccaceae [G1]	bacterium HMT-345	713029
+HMT-346	Saccharimonas	sp. HMT-346	713049
+HMT-347	Saccharimonas	sp. HMT-347	713050
+HMT-348	Parvisynbacter	sp. HMT-348	671231
+HMT-349	Saccharimonas	sp. HMT-349	713051
+HMT-350	Saccharimonadales [F1 G1]	bacterium HMT-350	713052
+HMT-351	Nanosyncoccus	sp. HMT-351	713053
+HMT-352	Nanosynbacter	sp. HMT-352	713054
+HMT-353	Nanosynbacter	sp. HMT-353	1895827
+HMT-354	Dermabacter	hominis	36740
+HMT-355	Saccharimonadales [F3 G1]	bacterium HMT-355	713056
+HMT-356	Nanoperiomorbus	periodonticus	713057
+HMT-357	Pyramidobacter	piscolens	638849
+HMT-358	Fretibacterium	sp. HMT-358	1434006
+HMT-359	Fretibacterium	sp. HMT-359	1434006
+HMT-360	Fretibacterium	sp. HMT-360	1434006
+HMT-361	Fretibacterium	sp. HMT-361	1434006
+HMT-362	Fretibacterium	sp. HMT-362	1434006
+HMT-363	Fretibacterium	fastidiosum	651822
+HMT-364	Nanosyncoccus	sp. HMT-364	1895827
+HMT-365	Odoribacteraceae [G3]	bacterium HMT-365	200643
+HMT-366	Ruminococcaceae [G3]	bacterium HMT-366	216572
+HMT-367	Nanosyncoccus	alces	1895827
+HMT-368	Dietzia	cinnamea	321318
+HMT-370	Fusobacterium	sp. HMT-370	712288
+HMT-371	Nanosyncoccus	nanoralicus	1895827
+HMT-373	Stomatobaculum	sp. HMT-373	1213720
+HMT-374	Cellulosimicrobium	funkei	1710
+HMT-375	Urinicoccus	timonensis	712430
+HMT-376	Hallella	sp. HMT-376	712466
+HMT-377	Peptoanaerobacter	yurii	186804
+HMT-378	Prevotella	micans	189723
+HMT-381	Ruminococcaceae [G3]	bacterium HMT-381	216572
+HMT-382	Anaerovoracaceae [G8]	bacterium HMT-382	186804
+HMT-383	Anaerovoracaceae [G1]	bacterium HMT-383	186804
+HMT-386	Anaerosphaera	mikwangii	652713
+HMT-388	Selenomonas	sp. HMT-388	712536
+HMT-389	Abiotrophia	defectiva	46125
+HMT-390	Parvisynbacter	sp. HMT-390	0
+HMT-391	Saccharimonadales [F5 G1]	bacterium HMT-391	0
+HMT-392	Pseudoleptotrichia	sp. HMT-392	712364
+HMT-393	Parvimonas	sp. HMT-393	713008
+HMT-394	Saccharimonas	sp. HMT-394	0
+HMT-396	Prevotella	sp. HMT-396	712467
+HMT-397	Saccharimonas	sp. HMT-397	0
+HMT-398	Streptococcus	oralis	1458253
+HMT-399	Nanogingivalis	sp. HMT-399	0
+HMT-400	Nanogingivalis	sp. HMT-400	0
+HMT-401	Nanogingivalis	sp. HMT-401	0
+HMT-402	Clostridiales [F1 G2]	bacterium HMT-402	186802
+HMT-403	Actinomyces	sp. HMT-403	0
+HMT-404	Schaalia	sp. HMT-404	0
+HMT-405	Kingella	negevensis	0
+HMT-406	Ralstonia	sp. HMT-406	48736
+HMT-407	Aeriscardovia	sp. HMT-407	240233
+HMT-408	Acinetobacter	sp. HMT-408	712104
+HMT-409	Lautropia	dentalis	0
+HMT-410	Prevotella	sp. HMT-410	0
+HMT-411	Streptococcus	parasanguinis	1318
+HMT-413	Alloprevotella	sp. HMT-413	0
+HMT-414	Actinomyces	sp. HMT-414	712122
+HMT-415	Streptococcus	rubneri	0
+HMT-416	Fannyhessea	sp. HMT-416	712157
+HMT-417	Leptotrichia	sp. HMT-417	712365
+HMT-418	Lentilactobacillus	parafarraginis	390842
+HMT-419	Stomatobaculum	longum	796942
+HMT-420	Fusobacterium	animalis	76859
+HMT-421	Veillonella	tobetsuensis	0
+HMT-422	Cloacibacterium	normanense	237258
+HMT-423	Streptococcus	sp. HMT-423	712632
+HMT-424	Lentilactobacillus	kisonensis	481722
+HMT-425	Streptococcus	pseudopneumoniae	0
+HMT-426	Aggregatibacter	kilianii	0
+HMT-427	Abiotrophia	sp. HMT-427	0
+HMT-428	Catonella	massiliensis	0
+HMT-429	Fusobacterium	pseudoperiodonticum	0
+HMT-430	Lachnoanaerobaculum	sp. HMT-430	0
+HMT-431	Streptococcus	infantis	712633
+HMT-432	Treponema	vincentii	0
+HMT-433	Campylobacter	concisus	0
+HMT-434	Gemella	haemolysans	0
+HMT-435	Syntrophomonadaceae [G1]	bacterium HMT-435	68298
+HMT-436	Odoribacteraceae [G3]	bacterium HMT-436	200643
+HMT-438	Treponema	socranskii	0
+HMT-439	Anaerolineae [G1]	bacterium HMT-439	292628
+HMT-440	Treponema	socranskii	0
+HMT-441	Lachnoanaerobaculum	sp. HMT-441	0
+HMT-442	Selenomonas	sp. HMT-442	712537
+HMT-443	Segatella	sp. HMT-443	712468
+HMT-444	Streptococcus	infantis	0
+HMT-445	Corynebacterium	aurimucosum	0
+HMT-447	Fusobacterium	simiae	0
+HMT-448	Actinomyces	sp. HMT-448	712124
+HMT-450	Corynebacterium	aurimucosum	0
+HMT-451	Catonella	sp. HMT-451	712234
+HMT-454	Corynebacterium	macclintockiae	0
+HMT-455	Butyrivibrio	sp. HMT-455	830
+HMT-456	Streptococcus	koreensis	0
+HMT-457	Oribacterium	sinus	237576
+HMT-458	Aggregatibacter	sp. HMT-458	712148
+HMT-459	Kingella	sp. HMT-459	712320
+HMT-460	Lachnoanaerobaculum	gingivalis	0
+HMT-461	Lactobacillus	ultunensis	227945
+HMT-463	Leptotrichia	sp. HMT-463	712367
+HMT-464	Fusobacterium	watanabei	0
+HMT-465	Bacteroides	zoogleoformans	28119
+HMT-466	Alloprevotella	tannerae	76122
+HMT-467	Anaerovoracaceae [G1]	sulci	186804
+HMT-468	Bacillus	subtilis	1423
+HMT-469	Prevotella	melaninogenica	28132
+HMT-473	Alloprevotella	sp. HMT-473	1283313
+HMT-475	Hoylesella	sp. HMT-475	712471
+HMT-476	Neisseria	subflava	28449
+HMT-477	Stutzerimonas	stutzeri	316
+HMT-479	Selenomonas	sp. HMT-479	712539
+HMT-481	Selenomonas	sp. HMT-481	712540
+HMT-483	Selenomonadaceae [G1]	bacterium HMT-483	1843491
+HMT-484	Erysipelothrix	tonsillarum	38402
+HMT-485	Agrobacterium	tumefaciens	358
+HMT-488	Nanosynbacter	fur	713059
+HMT-490	Treponema	sp. HMT-490	713469
+HMT-493	Anaerovoracaceae [G5]	bacterium HMT-493	186804
+HMT-494	Lachnoanaerobaculum	saburreum	467210
+HMT-495	Anaerovoracaceae [G3]	bacterium HMT-495	186804
+HMT-496	Lachnoanaerobaculum	sp. HMT-496	1164882
+HMT-498	Leptotrichia	sp. HMT-498	712368
+HMT-499	Neisseria	sp. HMT-499	712402
+HMT-500	Lachnospiraceae [G8]	bacterium HMT-500	186803
+HMT-501	Selenomonas	sp. HMT-501	712541
+HMT-503	Odoribacteraceae [G3]	bacterium HMT-503	200643
+HMT-504	Mollicutes [O1 F1 G1]	bacterium HMT-504	31969
+HMT-505	Odoribacteraceae [G5]	bacterium HMT-505	200643
+HMT-507	Odoribacteraceae [G5]	bacterium HMT-507	200643
+HMT-508	Treponema	sp. HMT-508	712747
+HMT-509	Odoribacteraceae [G4]	bacterium HMT-509	200643
+HMT-511	Odoribacteraceae [G5]	bacterium HMT-511	200643
+HMT-513	Aggregatibacter	sp. HMT-513	712150
+HMT-515	Hallella	sp. HMT-515	712472
+HMT-516	Odoribacter	sp. HMT-516	283168
+HMT-517	Treponema	sp. HMT-517	712748
+HMT-518	Treponema	sp. HMT-518	712749
+HMT-521	Mitsuokella	sp. HMT-521	712391
+HMT-523	Neisseria	sp. HMT-523	712403
+HMT-524	Veillonella	atypica	39777
+HMT-525	Actinomyces	sp. HMT-525	712126
+HMT-526	Hoylesella	koreensis	2490854
+HMT-529	Lactobacillus	acidophilus	1579
+HMT-530	Cutibacterium	acnes	1747
+HMT-531	Aggregatibacter	actinomycetemcomitans	714
+HMT-534	Granulicatella	adiacens	46124
+HMT-535	Haemophilus	aegyptius	197575
+HMT-536	Pseudomonas	aeruginosa	287
+HMT-537	Streptococcus	agalactiae	1311
+HMT-538	Pseudoramibacter	alactolyticus	113287
+HMT-539	Filifactor	alocis	143361
+HMT-540	Cardiobacterium	valvarum	194702
+HMT-541	Treponema	amylovorum	59892
+HMT-542	Peptostreptococcus	anaerobius	1261
+HMT-543	Streptococcus	anginosus	1328
+HMT-544	Brucella	anthropi	529
+HMT-545	Aggregatibacter	aphrophilus	732
+HMT-547	Porphyromonas	asaccharolytica	28123
+HMT-548	Peptoniphilus	asaccharolyticus	1258
+HMT-550	Staphylococcus	aureus	1280
+HMT-552	Cutibacterium	avidum	33010
+HMT-553	Segatella	baroniae	305719
+HMT-554	Acinetobacter	baumannii	470
+HMT-555	Gemella	bergeri	84136
+HMT-556	Prevotella	bivia	28125
+HMT-557	Gallibacter	brachy	186804
+HMT-558	Levilactobacillus	brevis	1580
+HMT-559	Afipia	broomeae	56946
+HMT-560	Segatella	buccae	28126
+HMT-561	Metamycoplasma	buccale	55602
+HMT-562	Hoylesella	buccalis	28127
+HMT-563	Leptotrichia	buccalis	40542
+HMT-565	Enterobacter	cancerogenus	69218
+HMT-567	Staphylococcus	caprae	29380
+HMT-568	Lacticaseibacillus	casei	1582
+HMT-569	Eggerthia	catenaformis	31973
+HMT-571	Burkholderia	cepacia	292
+HMT-572	Prevotella	veroralis	28137
+HMT-574	Escherichia	coli	562
+HMT-575	Campylobacter	concisus	199
+HMT-576	Streptococcus	constellatus	76860
+HMT-577	Eikenella	corrodens	539
+HMT-578	Streptococcus	cristatus	45634
+HMT-579	Cryptobacterium	curtum	84163
+HMT-580	Campylobacter	curvus	200
+HMT-582	Kingella	denitrificans	502
+HMT-583	Hallella	dentalis	52227
+HMT-584	Treponema	denticola	158
+HMT-586	Parascardovia	denticolens	78258
+HMT-587	Rothia	dentocariosa	2047
+HMT-588	Bifidobacterium	dentium	1689
+HMT-590	Brevundimonas	diminuta	293
+HMT-591	Corynebacterium	diphtheriae	1717
+HMT-593	Mogibacterium	diversum	114527
+HMT-594	Streptococcus	downei	1317
+HMT-595	Corynebacterium	durum	61592
+HMT-596	Granulicatella	elegans	137732
+HMT-597	Bradyrhizobium	elkanii	29448
+HMT-598	Neisseria	elongata	495
+HMT-600	Hoylesella	enoeca	76123
+HMT-601	Staphylococcus	epidermidis	1282
+HMT-602	Slackia	exigua	84109
+HMT-603	Bulleidia	extructa	118748
+HMT-604	Enterococcus	faecalis	1351
+HMT-605	Desulfovibrio	fairfieldensis	44742
+HMT-606	Metamycoplasma	faucium	56142
+HMT-607	Mycoplasmopsis	fermentans	2115
+HMT-608	Limosilactobacillus	fermentum	1613
+HMT-609	Neisseria	flava	34026
+HMT-610	Neisseria	flavescens	484
+HMT-612	Pseudomonas	fluorescens	294
+HMT-613	Tannerella	forsythia	28112
+HMT-614	Lysinibacillus	fusiformis	28031
+HMT-615	Lactobacillus	gasseri	1596
+HMT-616	Mycoplasmoides	genitalium	2097
+HMT-617	Schaalia	georgiae	52768
+HMT-618	Actinomyces	gerencseriae	52769
+HMT-619	Porphyromonas	gingivalis	837
+HMT-621	Neisseria	gonorrhoeae	485
+HMT-622	Streptococcus	gordonii	1302
+HMT-623	Campylobacter	gracilis	824
+HMT-626	Gemella	haemolysans	1379
+HMT-627	Capnocytophaga	haemolytica	45243
+HMT-630	Bacteroides	heparinolyticus	28113
+HMT-632	Metamycoplasma	hominis	2098
+HMT-633	Cardiobacterium	hominis	2718
+HMT-634	Enterobacter	hormaechei	158836
+HMT-635	Johnsonella	ignava	43995
+HMT-638	Streptococcus	infantis	68892
+HMT-639	Selenomonas	infelix	135082
+HMT-641	Haemophilus	influenzae	727
+HMT-642	Scardovia	inopinata	78259
+HMT-643	Prevotella	intermedia	28131
+HMT-644	Streptococcus	intermedius	1338
+HMT-645	Actinomyces	israelii	1659
+HMT-646	Kingella	kingae	504
+HMT-649	Neisseria	lactamica	486
+HMT-653	Treponema	lecithinolyticum	53418
+HMT-654	Eggerthella	lenta	84112
+HMT-655	Eubacterium	limosum	1736
+HMT-656	Mycoplasmopsis	lipophila	2117
+HMT-658	Hoylesella	loescheii	840
+HMT-659	Mesorhizobium	japonicum	2066070
+HMT-660	Aquamicrobium	lusatiense	89772
+HMT-662	Finegoldia	magna	1260
+HMT-663	Stenotrophomonas	maltophilia	40324
+HMT-664	Treponema	maltophilum	51160
+HMT-665	Hoylesella	marshii	189722
+HMT-666	Corynebacterium	matruchotii	43768
+HMT-667	Treponema	medium	58231
+HMT-669	Neisseria	meningitidis	487
+HMT-671	Schaalia	meyeri	52773
+HMT-673	Hornefia	minuta	186804
+HMT-674	Atopobium	minutum	1381
+HMT-676	Proteus	mirabilis	584
+HMT-677	Streptococcus	mitis	28037
+HMT-678	Solobacterium	moorei	102148
+HMT-681	Rothia	mucilaginosa	43675
+HMT-682	Neisseria	mucosa	488
+HMT-683	Simonsiella	muelleri	72
+HMT-684	Mitsuokella	multacida	52226
+HMT-685	Prevotella	multiformis	282402
+HMT-686	Streptococcus	mutans	1309
+HMT-688	Actinomyces	viscosus	1656
+HMT-689	Fusobacterium	naviforme	77917
+HMT-690	Fusobacterium	necrophorum	859
+HMT-691	Mogibacterium	neglectum	114528
+HMT-692	Mycolicibacterium	neoaurum	1795
+HMT-693	Prevotella	nigrescens	28133
+HMT-694	Hornefia	nodatum	186804
+HMT-698	Fusobacterium	nucleatum_sensu_stricto	76856
+HMT-700	Capnocytophaga	ochracea	1018
+HMT-701	Schaalia	odontolytica	1660
+HMT-703	Desulfomicrobium	orale	132132
+HMT-704	Metamycoplasma	orale	2121
+HMT-705	Hoylesella	oralis	28134
+HMT-706	Kingella	oralis	505
+HMT-707	Streptococcus	oralis	1303
+HMT-708	Actinomyces	oricola	206043
+HMT-709	Limosilactobacillus	oris	1632
+HMT-710	Schaalia	dentiphila	0
+HMT-711	Moraxella	osloensis	34062
+HMT-714	Prevotella	pallens	60133
+HMT-716	Lacticaseibacillus	paracasei	1597
+HMT-717	Variovorax	paradoxus	34073
+HMT-718	Haemophilus	parainfluenzae	729
+HMT-723	Lancefieldella	parvula	1382
+HMT-724	Treponema	parvum	138851
+HMT-725	Treponema	pectinovorum	164
+HMT-726	Centipeda	periodontii	82203
+HMT-728	Streptococcus	peroris	68891
+HMT-731	Klebsiella	pneumoniae	573
+HMT-732	Mycoplasmoides	pneumoniae	2104
+HMT-733	Chlamydia	pneumoniae	83558
+HMT-734	Streptococcus	pneumoniae	1313
+HMT-736	Dialister	pneumosintes	39950
+HMT-737	Neisseria	polysaccharea	489
+HMT-738	Anaerococcus	prevotii	33034
+HMT-739	Arachnia	propionica	1750
+HMT-740	Pseudomonas	oleovorans	330
+HMT-742	Mogibacterium	pumilum	86332
+HMT-743	Treponema	putidum	221027
+HMT-745	Streptococcus	pyogenes	1314
+HMT-746	Actinomyces	radicidentis	111015
+HMT-747	Erythrobacter	ramosus	35811
+HMT-748	Campylobacter	rectus	203
+HMT-749	Lacticaseibacillus	rhamnosus	47715
+HMT-750	Lancefieldella	rimae	1383
+HMT-753	Cronobacter	sakazakii	28141
+HMT-754	Metamycoplasma	salivarium	2124
+HMT-755	Streptococcus	salivarius	1304
+HMT-756	Ligilactobacillus	salivarius	1624
+HMT-757	Gemella	sanguinis	84135
+HMT-758	Streptococcus	sanguinis	1305
+HMT-759	Anaerovoracaceae [G5]	saphenum	186804
+HMT-762	Aggregatibacter	segnis	739
+HMT-763	Campylobacter	showae	204
+HMT-764	Neisseria	sicca	490
+HMT-767	Streptococcus	sinensis	176090
+HMT-768	Streptococcus	sobrinus	1310
+HMT-769	Treponema	socranskii	53419
+HMT-775	Capnocytophaga	sputigena	1019
+HMT-776	Campylobacter	sputorum	206
+HMT-777	Jonquetella	anthropi	428712
+HMT-779	Veillonella	sp. HMT-779	0
+HMT-780	Veillonella	sp. HMT-780	671229
+HMT-781	Hoylesella	saccharolytica	633701
+HMT-782	Prevotella	fusca	589436
+HMT-783	Corynebacterium	kefirresidentii	0
+HMT-784	Peptoniphilus	lacydonensis	0
+HMT-785	Porphyromonas	uenonis	281920
+HMT-786	Paenibacillus	phoenicis	554117
+HMT-787	Bacteroides	pyogenes	310300
+HMT-788	Anaerococcus	tetradius	33036
+HMT-789	Staphylococcus	saccharolyticus	0
+HMT-790	Peptoniphilaceae [G2]	bacterium HMT-790	1570339
+HMT-791	Cutibacterium	namnetense	0
+HMT-792	Anaerococcus	nagyae	0
+HMT-794	Hallella	multisaccharivorax	310514
+HMT-795	Hoylesella	shahii	228603
+HMT-796	Peptoanaerobacter	margaretiae	0
+HMT-797	Prevotella	amnii	0
+HMT-798	Prevotella	timonensis	0
+HMT-799	Ureaplasma	parvum	0
+HMT-801	Enterococcus	casseliflavus	37734
+HMT-802	Enterococcus	saccharolyticus	41997
+HMT-803	Enterococcus	italicus	246144
+HMT-804	Lactococcus	lactis	1358
+HMT-805	Treponema	pallidum	160
+HMT-806	Olsenella	profusa	138595
+HMT-807	Olsenella	sp. HMT-807	712411
+HMT-808	Tannerella	sp. HMT-808	712711
+HMT-809	Olsenella	phocaeensis	661086
+HMT-810	Olegusella	massiliensis	1776381
+HMT-811	Arcanobacterium	haemolyticum	28264
+HMT-812	Helicobacter	pylori	210
+HMT-813	Dolosigranulum	pigrum	29394
+HMT-814	Fannyhessea	vaginae	82135
+HMT-815	Methanobrevibacter	oralis	66851
+HMT-816	Limosilactobacillus	coleohominis	181675
+HMT-817	Lactobacillus	crispatus	47770
+HMT-818	Limosilactobacillus	reuteri	1598
+HMT-819	Lactobacillus	johnsonii	33959
+HMT-820	Prevotella	illustrans	838
+HMT-821	Haemophilus	ducreyi	730
+HMT-822	Mycobacterium	tuberculosis	1773
+HMT-823	Mycobacterium	leprae	1769
+HMT-824	Bacillus	anthracis	1392
+HMT-825	Listeria	monocytogenes	1639
+HMT-827	Yersinia	pestis	632
+HMT-828	Bordetella	pertussis	520
+HMT-829	Gardnerella	vaginalis	2702
+HMT-830	Mobiluncus	mulieris	2052
+HMT-831	Alloiococcus	otitis	1652
+HMT-832	Corynebacterium	otitidis	29321
+HMT-833	Moraxella	catarrhalis	480
+HMT-834	Pseudomonas	otitidis	319939
+HMT-835	Corynebacterium	mucifaciens	57171
+HMT-836	Peptoniphilus	lacrimalis	33031
+HMT-837	Sneathia	sanguinegens	40543
+HMT-838	Lactobacillus	iners	147802
+HMT-839	Lactobacillus	jensenii	109790
+HMT-840	Peptoniphilus	indolicus	33030
+HMT-841	Megasphaera	lornae	906
+HMT-842	Campylobacter	ureolyticus	827
+HMT-843	Dialister	micraerophilus	309120
+HMT-844	Sneathia	vaginalis	187101
+HMT-845	Pseudoleptotrichia	goodfellowii	157692
+HMT-846	Gardnerella	piotii	0
+HMT-847	Leptotrichia	sp. HMT-847	1785996
+HMT-848	Peptidiphaga	gingivicola	1823756
+HMT-849	Actinomyces	johnsonii	544581
+HMT-850	Schaalia	cardiffensis	181487
+HMT-851	Haemophilus	haemolyticus	726
+HMT-852	Actinomyces	massiliensis	461393
+HMT-853	Corynebacterium	urealyticum	43771
+HMT-854	Ralstonia	pickettii	329
+HMT-855	Kytococcus	sedentarius	1276
+HMT-856	Sanguibacter	keddieii	60920
+HMT-857	Rhodobacter	capsulatus	1061
+HMT-858	Comamonas	testosteroni	285
+HMT-859	Anaerococcus	lactolyticus	33032
+HMT-860	Fusobacterium	gonidiaformans	849
+HMT-861	Lactiplantibacillus	plantarum	1590
+HMT-862	Bifidobacterium	longum	216816
+HMT-863	Capnocytophaga	sp. HMT-863	1227265
+HMT-865	Kluyvera	ascorbata	51288
+HMT-866	Actinomyces	graevenitzii	55565
+HMT-867	Gardnerella	leopoldii	0
+HMT-868	Gardnerella	swidsinskii	0
+HMT-869	Saccharimonas	sp. HMT-869	1540868
+HMT-870	Nanogingivalis	gingivitcus	1540867
+HMT-871	Patescibacteria [C1 O1 F1 G1]	bacterium HMT-871	1226338
+HMT-872	Patescibacteria [C1 O1 F1 G1]	bacterium HMT-872	1226339
+HMT-873	Patescibacteria [C1 O1 F1 G2]	bacterium HMT-873	1226340
+HMT-874	Absconditicoccaceae [G1]	bacterium HMT-874	221235
+HMT-875	Absconditicoccaceae [G1]	bacterium HMT-875	221235
+HMT-876	Clostridiales [F3 G1]	bacterium HMT-876	186802
+HMT-878	Capnocytophaga	sp. HMT-878	1316596
+HMT-879	Leptotrichia	sp. HMT-879	1227267
+HMT-880	Enterococcus	durans	53345
+HMT-881	Lentilactobacillus	buchneri	1581
+HMT-882	Limosilactobacillus	panis	47493
+HMT-883	Lactiplantibacillus	pentosus	1589
+HMT-884	Lentilactobacillus	rapi	481723
+HMT-885	Prevotella	scopos	589437
+HMT-887	Veillonella	denticariosi	419208
+HMT-888	Actinomyces	dentalis	272548
+HMT-889	Bifidobacterium	breve	1685
+HMT-890	Bifidobacterium	subtile	77635
+HMT-891	Bifidobacterium	scardovii	158787
+HMT-892	Selenomonas	sp. HMT-892	1321785
+HMT-893	Actinomyces	oris	544580
+HMT-894	Ottowia	sp. HMT-894	1658672
+HMT-895	Bifidobacterium	animalis	28025
+HMT-896	Actinomyces	sp. HMT-896	1654
+HMT-897	Actinomyces	sp. HMT-897	2081702
+HMT-898	Aggregatibacter	sp. HMT-898	416916
+HMT-899	Odoribacteraceae [G3]	bacterium HMT-899	200643
+HMT-900	Weeksellaceae [G1]	bacterium HMT-900	2762318
+HMT-901	Capnocytophaga	sp. HMT-901	1016
+HMT-904	Erysipelotrichaceae [G1]	bacterium HMT-904	128827
+HMT-905	Erysipelotrichaceae [G1]	bacterium HMT-905	128827
+HMT-906	Mollicutes [O2 F2 G2]	bacterium HMT-906	31969
+HMT-907	Weeksellaceae [G1]	bacterium HMT-907	2762318
+HMT-909	Leptotrichia	sp. HMT-909	32067
+HMT-910	Stomatobaculum	sp. HMT-910	1213720
+HMT-911	Odoribacteraceae [G7]	bacterium HMT-911	200643
+HMT-912	Alloprevotella	sp. HMT-912	1283313
+HMT-913	Alloprevotella	sp. HMT-913	1283313
+HMT-914	Alloprevotella	sp. HMT-914	1283313
+HMT-915	Propionibacteriaceae [G1]	bacterium HMT-915	31957
+HMT-916	Tannerella	sp. HMT-916	195950
+HMT-917	Veillonella	sp. HMT-917	29465
+HMT-918	Selenomonadaceae [G1]	bacterium HMT-918	1843491
+HMT-919	Selenomonas	sp. HMT-919	970
+HMT-920	Selenomonas	sp. HMT-920	1884263
+HMT-921	Paenibacillus	glucanolyticus	59843
+HMT-922	Peptoanaerobacter	sp. HMT-922	186804
+HMT-924	Lachnocurva	vaginae	186803
+HMT-927	Treponema	sp. HMT-927	157
+HMT-928	Gemella	massiliensis	1785995
+HMT-929	Peptoniphilaceae [G3]	bacterium HMT-929	1570339
+HMT-930	Porphyromonas	sp. HMT-930	836
+HMT-931	Weeksellaceae [G1]	bacterium HMT-931	2762318
+HMT-932	Kingella	sp. HMT-932	32257
+HMT-933	Pedobacter	sp. HMT-933	84567
+HMT-934	Oribacterium	parvum	1501329
+HMT-935	Fastidiosipila	sanguinis	236753
+HMT-936	Selenomonas	sp. HMT-936	970
+HMT-937	Selenomonas	sp. HMT-937	970
+HMT-939	Olsenella	sp. HMT-939	133925
+HMT-942	Hoylesella	sp. HMT-942	838
+HMT-943	Prevotella	aurantiaca	596085
+HMT-944	Haemophilus	sputorum	1078480
+HMT-945	Haemophilus	parahaemolyticus	735
+HMT-946	Haemophilus	pittmaniae	249188
+HMT-948	Streptococcus	lactarius	684066
+HMT-949	Aggregatibacter	sp. HMT-949	416916
+HMT-950	Anaerovoracaceae [G3]	bacterium HMT-950	186804
+HMT-951	Treponema	sp. HMT-951	157
+HMT-952	Nanosynbacter	lyticus	1895827
+HMT-953	Fusobacterium	hwasookii	1583098
+HMT-954	Saccharimonadales [F4 G1]	bacterium HMT-954	1895827
+HMT-955	Saccharimonas	sicarius	1895827
+HMT-956	Neisseria	cinerea	483
+HMT-957	Nanosynbacter	featherlites	1895827
+HMT-960	Agathobacter	rectalis	0
+HMT-961	Faecalibacterium	prausnitzii	0
+HMT-962	Hominimerdicola	aceti	0
+HMT-963	Akkermansia	muciniphila	0
+HMT-964	Alistipes	onderdonkii	0
+HMT-965	Alistipes	putredinis	0
+HMT-966	Alistipes	shahii	0
+HMT-967	Bacteroides	caccae	0
+HMT-968	Bacteroides	ovatus	0
+HMT-969	Bacteroides	stercoris	0
+HMT-970	Bacteroides	thetaiotaomicron	0
+HMT-971	Bacteroides	uniformis	0
+HMT-972	Bacteroides	xylanisolvens	0
+HMT-973	Parabacteroides	distasonis	0
+HMT-974	Parabacteroides	merdae	0
+HMT-975	Phocaeicola	dorei	0
+HMT-976	Phocaeicola	massiliensis	0
+HMT-977	Phocaeicola	plebeius	0
+HMT-978	Phocaeicola	vulgatus	0
+HMT-979	Prevotella	copri	0
+HMT-982	Ignavibacterium	album	591197
+HMT-983	Melioribacter	roseus	1134405
+HMT-984	Chlorobium	limicola	1092
+HMT-986	Saccharimonadales [F2 G1]	bacterium HMT-986	1895827
+HMT-988	Saccharimonas	aalborgensis	1332188
+HMT-989	Saccharimonadales [F2 G1]	bacterium HMT-989	1895827
+HMT-991	Absconditicoccaceae [G2]	bacterium HMT-991	221235
+HMT-994	Caldilinea	aerophila	133453
+HMT-995	Anaerolinea	thermophila	167964
+HMT-998	Victivallis	lenta	255528
+HMT-999	Eremiobacterota [C1 O1 F1 G1]	bacterium HMT-999	1955638
