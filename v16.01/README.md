@@ -31,6 +31,13 @@ This directory contains the scripts and instructions specifically for processing
     python3 filter_dropped.py
     ```
 
-## 📂 Generated Files
-* `HOMD_Refseq2taxid_fixed2.tsv`: The final mapping file.
-* `HOMD_download/..._filtered.fasta`: The filtered FASTA file.
+## 📂 Generated Files & Usage
+The outputs are designed for use in downstream analysis tools like the EPI2ME 16S workflow.
+
+* **`HOMD_Refseq2taxid_fixed2.tsv`**
+    * **Description**: A two-column, tab-separated file that links each RefSeq ID to its corresponding NCBI Taxonomy ID.
+    * **EPI2ME Usage**: Use in the **"File linking reference IDs to specific taxids"** option (in "Rerefence options").
+
+* **`HOMD_16S_rRNA_RefSeq_V16.01_full_filtered.fasta`**
+    * **Description**: The clean FASTA file containing reference sequences. Sequences with unknown TaxIDs have been removed.
+    * **EPI2ME Usage**: Use in the **"Minimap2 reference"** option (in "Reference options").
