@@ -1,68 +1,101 @@
-# make HOMD Refseq2taxid table
-## 2025/5/15
-## Version: Taxonomy V4.0, 16S rRNA V16.01, Genomic RefSeq V11.01
-## download HOMD_16S_rRNA_RefSeq_V16.01_full.fasta from HOMD website (v4)
-## run this script in WSL
+#!/bin/bash
 
-## extract sequece names from fasta header 
-### count sequence headers
+#================================================================================
+# Script to Generate HOMD RefSeq-to-TaxID Mapping File
+#
+# Purpose:
+#   To generate a mapping file that associates RefSeq IDs with NCBI TaxIDs,
+#   based on the FASTA and taxonomy table files downloaded from HOMD.
+#   Notably, this script includes a step to manually correct TaxIDs
+#   that are missing in the source data.
+#
+# Version Info:
+#   - Taxonomy V4.0
+#   - 16S rRNA V16.01
+#   - Genomic RefSeq V11.01
+#
+# Date Created: 2025/5/15
+#================================================================================
+
+# --- Preliminary Checks ---
+# (Informational) Count the total number of sequences in the input FASTA file.
+echo "INFO: Counting sequences in FASTA file..."
 grep "^>" HOMD_download/HOMD_16S_rRNA_RefSeq_V16.01_full.fasta | wc -l
 ###> 6880
-### There are much more sequences in the fasta file than in the previous v15.23 file (1015).
 
-## extract sequence names from FASTA file and save it to a text file
+# --- STEP 1: Extract and Format Sequence Headers from FASTA ---
+echo "STEP 1: Extracting and formatting sequence headers..."
+
+# Create a temporary working directory.
 mkdir temp
+# Extract only the header lines (starting with '>') from the input FASTA file.
 grep "^>" HOMD_download/HOMD_16S_rRNA_RefSeq_V16.01_full.fasta > "./temp/1.fasta_header.txt"
 
-## Remove ">" from the 1st row. Remove "HMT-" and white spaces from the 3rd row. Print the 1st and 3rd row.
+# Format the header information into "RefSeq ID <tab> HMT-ID <tab> Organism Name".
 awk '
     {
-        gsub(">", "", $1); \
-        gsub(" +", "", $1); \
-        # use tab as delimiter
-        {print $1 "\t" $2 "\t" $3, $4} \
+        # Remove the leading ">" from the identifier ($1).
+        gsub(">", "", $1);
+        # [Safety measure] Remove any potential spaces within the identifier ($1)
+        # as a precaution for non-standard FASTA formats.
+        gsub(" +", "", $1);
+        # Print the formatted output.
+        print $1 "\t" $2 "\t" $3, $4
     }
 ' temp/1.fasta_header.txt > temp/2.Refseq_HMT_number.txt
-## count lines
-wc temp/2.Refseq_HMT_number.txt
+
+# Count the lines to verify all headers were processed.
+wc -l temp/2.Refseq_HMT_number.txt
 ###> 6880
 
-## Download HOMD taxon table from HOMD website. (Downloads > Batch HOMD data > Batch taxonomy data > Taxon table ("tab delimited txt (save to file)")
-## count lines in taxon table
+
+# --- STEP 2: Process and Clean the Taxonomy Table ---
+echo "STEP 2: Processing and cleaning the taxonomy table..."
+
+# (Informational) Count the total number of lines in the input taxonomy table.
+echo "INFO: Counting lines in taxonomy table..."
 wc HOMD_download/HOMD_taxon_table2025-05-15_1747298168.txt
 #> 899
 
-## Extract HMT number of DROPPED Taxon.
-## grep "DROPPED Taxon" in the 2nd column and print the 1st and 2nd column.
+# (For debugging/logging) Create a list of taxa marked as "DROPPED Taxon".
+# This file is not used by the script itself but can be useful for manual review.
 awk -F '\t' '
 {
     if ($2 == "DROPPED Taxon") print $1 "\t" $2
 }' HOMD_download/HOMD_taxon_table2025-05-15_1747298168.txt > temp/3.HOMD_taxon_table_dropped.txt
 
-## Remove lines with "DROPPED Taxon" in the 2nd column or no taxid in the 8th column.
+# Create a clean version of the taxonomy table by removing "DROPPED Taxon" entries.
 awk -F '\t' '$2 != "DROPPED Taxon"' \
     HOMD_download/HOMD_taxon_table2025-05-15_1747298168.txt > temp/3.HOMD_taxon_table_without-dropped.txt
-wc temp/3.HOMD_taxon_table_without-dropped.txt
+wc -l temp/3.HOMD_taxon_table_without-dropped.txt
 #> 836
 
-## extract information from taxon table
-# awk -F '\t' '{print $1, $7, $8, $16}' HOMD_taxon_table2025-05-15_1747298168.txt > temp/3.HOMD_taxon_table.txt
+# From the clean table, extract only the required columns for the join operation.
+# (1:HMT-ID, 7:Genus, 8:Species, 16:NCBI TaxID).
 awk -F '\t' '{print $1 "\t" $7 "\t" $8 "\t" $16}' temp/3.HOMD_taxon_table_without-dropped.txt > temp/4.HOMD_taxon_table.txt
-wc temp/4.HOMD_taxon_table.txt
+wc -l temp/4.HOMD_taxon_table.txt
 #> 836
 
-## Join the fasta header file with the taxon table using the HMT number as the key.
-## The output will be a tab-separated file with the HMT number and the taxid.
+
+# --- STEP 3: Join Sequence Info with Taxonomy Info ---
+echo "STEP 3: Joining sequence and taxonomy data..."
+
+# Use awk to join the two files based on the HMT number (column 2 in the second file).
+# It reads the taxonomy table (file 1) into memory as a lookup array.
+# Then, it iterates through the sequence header table (file 2) and appends the
+# corresponding TaxID. If no match is found, it appends "N/A".
 awk -F '\t' '
 NR==FNR {taxon[$1] = $4; next} {if ($2 in taxon) print $0, taxon[$2]; else print $0, "N/A"}
 ' temp/4.HOMD_taxon_table.txt temp/2.Refseq_HMT_number.txt > temp/5.Refseq_HMT_taxid.txt
-
-wc temp/5.Refseq_HMT_taxid.txt
+wc -l temp/5.Refseq_HMT_taxid.txt
 #> 6880
 
-## Extract Refseq number and taxid and output as tab space. 
+# --- STEP 4: Create Initial Mapping File & Identify Missing Data ---
+echo "STEP 4: Creating initial mapping file and identifying missing data..."
+
+# Extract just the RefSeq ID (column 1) and the TaxID (column 5) to create the initial mapping table.
 awk  '{print $1 "\t" $5}' temp/5.Refseq_HMT_taxid.txt > temp/HOMD_Refseq2taxid.tsv
-wc temp/HOMD_Refseq2taxid.tsv
+wc -l temp/HOMD_Refseq2taxid.tsv
 #> 6880
 
 ##--TEMP--
@@ -77,8 +110,7 @@ wc temp/HOMD_Refseq2taxid_fake_Thermococcus_test.tsv
 ## there are also empty taxid. manually fixed. script should be fixed.
 ##---------
 
-
-## count how many lines in the taxid column in HOMD_Refseq2taxid.tsv is "0" or empty, and print separately.
+# Count how many entries in the initial mapping file have a missing TaxID (either "0" or empty).
 awk -F '\t' '
 {
     if ($2 == "0") {zero_count++}
@@ -91,14 +123,18 @@ END {
 #> zero_count: 677
 #> empty_count: 29
 
-## print the lines with "0" or empty taxid.
+# (For debugging) Print the lines that have a missing TaxID.
 awk -F '\t' '
 {
     if ($2 == "0" || $2 == "") print $0
 }' temp/HOMD_Refseq2taxid.tsv
 
-## Fix the "0" and empty taxid.
-## 1. If the first column starts with "HMT-464", set the taxid to 2686067 (Fusobacterium watanabei). and so on.
+# --- STEP 5: Manually Fix Known Missing TaxIDs ---
+echo "STEP 5: Manually fixing known missing TaxIDs..."
+
+# This is the main data cleaning step. It uses a series of if/else statements
+# to assign the correct, known TaxID to entries that are missing them in the
+# source HOMD data, based on their HMT-ID prefix.
 awk -F '\t' '
 {
     if ($1 ~ /^HMT-464/) $2 = "2686067"; # Fusobacterium watanabei
@@ -176,16 +212,20 @@ awk -F '\t' '
 wc temp/HOMD_Refseq2taxid_fixed.tsv
 #> 6880
 
-## remove the lines with "0" or empty taxid.
+# --- STEP 6: Generate Final Files ---
+echo "STEP 6: Generating final output files..."
+
+# Create the final, clean mapping file by removing any entries that *still*
+# have a missing TaxID after the manual fix, and then sorting the result.
 awk -F '\t' '
 {
     if ($2 != "0" && $2 != "") print $0
 }' temp/HOMD_Refseq2taxid_fixed.tsv | sort -k1,1 > HOMD_Refseq2taxid_fixed2.tsv
+echo "INFO: Final mapping file 'HOMD_Refseq2taxid_fixed2.tsv' created."
+wc -l HOMD_Refseq2taxid_fixed2.tsv
 
-wc HOMD_Refseq2taxid_fixed2.tsv
-
+# This block is for iteratively checking if any missing TaxIDs remain after a fix.
 ### -----repeat the process until all "0" and empty taxid are fixed. ------------
-## count how many lines in the taxid column in HOMD_Refseq2taxid.tsv is "0" or empty, and print separately.
 awk -F '\t' '
 {
     if ($2 == "0") {zero_count++}
@@ -196,22 +236,24 @@ END {
     print "empty_count: " empty_count
 }' temp/HOMD_Refseq2taxid_fixed.tsv
 
-## print the lines with "0" or empty taxid, sorted by the first column.
 awk -F '\t' '
 {
     if ($2 == "0" || $2 == "") print $0
 }' temp/HOMD_Refseq2taxid_fixed.tsv | sort -k1,1
 ### ---------------------------------------------
 
-## print and save the lines with empty taxid, sorted by the first column. (these are dropped sequences)
+# Create the exclusion list for the next step in the workflow.
+# This file lists the headers of sequences that could not be assigned a TaxID.
+# It will be read by the Python script to filter the main FASTA file.
 awk -F '\t' '
 {
     if ($2 == "") print $0
 }' HOMD_Refseq2taxid_fixed.tsv | sort -k1,1 > temp/HOMD_16S_dropped_header.txt
-wc temp/HOMD_16S_dropped_header.txt
+echo "INFO: Exclusion list 'temp/HOMD_16S_dropped_header.txt' created."
+wc -l temp/HOMD_16S_dropped_header.txt
 #> 29
 
-## from here, use the python script "filter_dropped.py" to filter out the dropped sequences from the fasta file.
-## run the script in WSL
-python3 filter_dropped.py \
-
+# --- Next Step ---
+# The workflow now passes control to the Python script to perform the FASTA filtering.
+echo "🚀 All steps complete. Please run 'filter_dropped.py' next."
+python3 filter_dropped.py
