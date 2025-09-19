@@ -34,6 +34,7 @@ echo "✅ Step 0: Temporary directory 'temp' is ready."
 # (Informational) Count the total number of sequences in the input FASTA file.
 echo "INFO: Counting sequences in FASTA file..."
 grep "^>" "$FASTA_FILE" | wc -l
+#> 6600
 
 # --- STEP 1: Extract and Format Sequence Headers from FASTA ---
 echo "STEP 1: Extracting and formatting sequence headers..."
@@ -56,6 +57,7 @@ awk '
 
 # Count the lines to verify all headers were processed.
 wc -l temp/2.Refseq_HMT_number.txt
+#> 6600
 
 
 # --- STEP 2: Process and Clean the Taxonomy Table ---
@@ -64,6 +66,7 @@ echo "STEP 2: Processing and cleaning the taxonomy table..."
 # (Informational) Count the total number of lines in the input taxonomy table.
 echo "INFO: Counting lines in taxonomy table..."
 wc "$TAXON_TABLE_FILE"
+#> 901
 
 # (For debugging/logging) Create a list of taxa marked as "DROPPED Taxon".
 # This file is not used by the script itself but can be useful for manual review.
@@ -76,11 +79,13 @@ awk -F '\t' '
 awk -F '\t' '$2 != "DROPPED Taxon"' \
     "$TAXON_TABLE_FILE" > temp/3.HOMD_taxon_table_without-dropped.txt
 wc -l temp/3.HOMD_taxon_table_without-dropped.txt
+#> 838
 
 # From the clean table, extract only the required columns for the join operation.
 # (1:HMT-ID, 7:Genus, 8:Species, 16:NCBI TaxID).
 awk -F '\t' '{print $1 "\t" $7 "\t" $8 "\t" $16}' temp/3.HOMD_taxon_table_without-dropped.txt > temp/4.HOMD_taxon_table.txt
 wc -l temp/4.HOMD_taxon_table.txt
+#> 838
 
 
 # --- STEP 3: Join Sequence Info with Taxonomy Info ---
@@ -94,7 +99,7 @@ awk -F '\t' '
 NR==FNR {taxon[$1] = $4; next} {if ($2 in taxon) print $0, taxon[$2]; else print $0, "N/A"}
 ' temp/4.HOMD_taxon_table.txt temp/2.Refseq_HMT_number.txt > temp/5.Refseq_HMT_taxid.txt
 wc -l temp/5.Refseq_HMT_taxid.txt
-#> 6880
+#> 6600
 
 # --- STEP 4: Create Initial Mapping File & Identify Missing Data ---
 echo "STEP 4: Creating initial mapping file and identifying missing data..."
@@ -102,7 +107,7 @@ echo "STEP 4: Creating initial mapping file and identifying missing data..."
 # Extract just the RefSeq ID (column 1) and the TaxID (column 5) to create the initial mapping table.
 awk  '{print $1 "\t" $5}' temp/5.Refseq_HMT_taxid.txt > temp/HOMD_Refseq2taxid.tsv
 wc -l temp/HOMD_Refseq2taxid.tsv
-#> 6880
+#> 6600
 
 ##--TEMP--
 ## zero values in the taxid column caused error when runnning wf-16S
@@ -112,7 +117,7 @@ awk -F '\t' '{
     print $1 "\t" $2
 }' temp/HOMD_Refseq2taxid.tsv > temp/HOMD_Refseq2taxid_fake_Thermococcus_test.tsv
 wc temp/HOMD_Refseq2taxid_fake_Thermococcus_test.tsv
-#> 6880
+#> 6600
 ## there are also empty taxid. manually fixed. script should be fixed.
 ##---------
 
@@ -126,10 +131,11 @@ END {
     print "zero_count: " zero_count
     print "empty_count: " empty_count
 }' temp/HOMD_Refseq2taxid.tsv
-#> zero_count: 677
-#> empty_count: 29
+#> zero_count: 671
+#> empty_count: 
 
 # (For debugging) Print the lines that have a missing TaxID.
+echo -e "\nDEBUG: Displaying entries with missing TaxIDs ('0' or empty) before manual fixing..."
 awk -F '\t' '
 {
     if ($2 == "0" || $2 == "") print $0
@@ -216,7 +222,7 @@ awk -F '\t' '
 }' temp/HOMD_Refseq2taxid.tsv > temp/HOMD_Refseq2taxid_fixed.tsv
 
 wc temp/HOMD_Refseq2taxid_fixed.tsv
-#> 6880
+#> 6600
 
 # --- STEP 6: Generate Final Files ---
 echo "STEP 6: Generating final output files..."
@@ -229,6 +235,8 @@ awk -F '\t' '
 }' temp/HOMD_Refseq2taxid_fixed.tsv | sort -k1,1 > HOMD_Refseq2taxid_fixed2.tsv
 echo "INFO: Final mapping file 'HOMD_Refseq2taxid_fixed2.tsv' created."
 wc -l HOMD_Refseq2taxid_fixed2.tsv
+#> 6598
+
 
 # This block is for iteratively checking if any missing TaxIDs remain after a fix.
 ### -----repeat the process until all "0" and empty taxid are fixed. ------------
@@ -241,11 +249,16 @@ END {
     print "zero_count: " zero_count
     print "empty_count: " empty_count
 }' temp/HOMD_Refseq2taxid_fixed.tsv
+#> zero_count: 2
+#> empty_count: 0
 
 awk -F '\t' '
 {
     if ($2 == "0" || $2 == "") print $0
 }' temp/HOMD_Refseq2taxid_fixed.tsv | sort -k1,1
+#> HMT-471_16S006489       0
+#> HMT-796_16S003636       0
+
 ### ---------------------------------------------
 
 # Create the exclusion list for the next step in the workflow.
