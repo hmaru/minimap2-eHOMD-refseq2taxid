@@ -20,9 +20,8 @@
 # Please specify the paths to your input files here.
 # These variables will be used throughout the script.
 
-FASTA_FILE="HOMD_download/HOMD_16S_rRNA_RefSeq_V16.01_full.fasta"
-TAXON_TABLE_FILE="HOMD_download/HOMD_taxon_table2025-05-15_1747298168.txt"
-
+FASTA_FILE="HOMD_download/HOMD_16S_rRNA_RefSeq_V16.03_full.fasta"
+TAXON_TABLE_FILE="HOMD_download/HOMD_taxon_table2025-09-19_1758256465.txt"
 #================================================================================
 
 # --- Initialization ---
