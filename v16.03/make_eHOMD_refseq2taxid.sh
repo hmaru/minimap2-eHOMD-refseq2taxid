@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #================================================================================
-# Script to Generate HOMD RefSeq-to-TaxID Mapping File
+# Script to Generate eHOMD RefSeq-to-TaxID Mapping File (refseq2taxid)
 #
 # Purpose:
 #   To generate a mapping file that associates RefSeq IDs with NCBI TaxIDs,
@@ -10,10 +10,10 @@
 #   that are missing in the source data.
 #
 # Version Info:
-#   - Taxonomy V4.0
-#   - 16S rRNA V16.01
+#   - Taxonomy V4.1
+#   - 16S rRNA V16.03
 #
-# Date Created: 2025/5/15
+# Date Created: 2025/9/19
 #================================================================================
 
 # --- Preliminary Checks ---
