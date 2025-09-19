@@ -16,19 +16,31 @@
 # Date Created: 2025/9/19
 #================================================================================
 
+# --- CONFIGURATION ---
+# Please specify the paths to your input files here.
+# These variables will be used throughout the script.
+
+FASTA_FILE="HOMD_download/HOMD_16S_rRNA_RefSeq_V16.01_full.fasta"
+TAXON_TABLE_FILE="HOMD_download/HOMD_taxon_table2025-05-15_1747298168.txt"
+
+#================================================================================
+
+# --- Initialization ---
+# Create a temporary working directory if it doesn't exist
+mkdir -p temp
+echo "✅ Step 0: Temporary directory 'temp' is ready."
+
+
 # --- Preliminary Checks ---
 # (Informational) Count the total number of sequences in the input FASTA file.
 echo "INFO: Counting sequences in FASTA file..."
-grep "^>" HOMD_download/HOMD_16S_rRNA_RefSeq_V16.01_full.fasta | wc -l
-###> 6880
+grep "^>" "$FASTA_FILE" | wc -l
 
 # --- STEP 1: Extract and Format Sequence Headers from FASTA ---
 echo "STEP 1: Extracting and formatting sequence headers..."
 
-# Create a temporary working directory.
-mkdir temp
 # Extract only the header lines (starting with '>') from the input FASTA file.
-grep "^>" HOMD_download/HOMD_16S_rRNA_RefSeq_V16.01_full.fasta > "./temp/1.fasta_header.txt"
+grep "^>" "$FASTA_FILE" > "./temp/1.fasta_header.txt"
 
 # Format the header information into "RefSeq ID <tab> HMT-ID <tab> Organism Name".
 awk '
@@ -45,7 +57,6 @@ awk '
 
 # Count the lines to verify all headers were processed.
 wc -l temp/2.Refseq_HMT_number.txt
-###> 6880
 
 
 # --- STEP 2: Process and Clean the Taxonomy Table ---
@@ -53,27 +64,24 @@ echo "STEP 2: Processing and cleaning the taxonomy table..."
 
 # (Informational) Count the total number of lines in the input taxonomy table.
 echo "INFO: Counting lines in taxonomy table..."
-wc HOMD_download/HOMD_taxon_table2025-05-15_1747298168.txt
-#> 899
+wc "$TAXON_TABLE_FILE"
 
 # (For debugging/logging) Create a list of taxa marked as "DROPPED Taxon".
 # This file is not used by the script itself but can be useful for manual review.
 awk -F '\t' '
 {
     if ($2 == "DROPPED Taxon") print $1 "\t" $2
-}' HOMD_download/HOMD_taxon_table2025-05-15_1747298168.txt > temp/3.HOMD_taxon_table_dropped.txt
+}' "$TAXON_TABLE_FILE" > temp/3.HOMD_taxon_table_dropped.txt
 
 # Create a clean version of the taxonomy table by removing "DROPPED Taxon" entries.
 awk -F '\t' '$2 != "DROPPED Taxon"' \
-    HOMD_download/HOMD_taxon_table2025-05-15_1747298168.txt > temp/3.HOMD_taxon_table_without-dropped.txt
+    "$TAXON_TABLE_FILE" > temp/3.HOMD_taxon_table_without-dropped.txt
 wc -l temp/3.HOMD_taxon_table_without-dropped.txt
-#> 836
 
 # From the clean table, extract only the required columns for the join operation.
 # (1:HMT-ID, 7:Genus, 8:Species, 16:NCBI TaxID).
 awk -F '\t' '{print $1 "\t" $7 "\t" $8 "\t" $16}' temp/3.HOMD_taxon_table_without-dropped.txt > temp/4.HOMD_taxon_table.txt
 wc -l temp/4.HOMD_taxon_table.txt
-#> 836
 
 
 # --- STEP 3: Join Sequence Info with Taxonomy Info ---
