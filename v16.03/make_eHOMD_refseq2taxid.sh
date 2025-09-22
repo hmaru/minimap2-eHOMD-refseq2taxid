@@ -265,5 +265,6 @@ wc -l temp/HOMD_16S_dropped_header.txt
 
 # --- Next Step ---
 # The workflow now passes control to the Python script to perform the FASTA filtering.
+# If there are no entries in the exclusion list, this step is not needed.
 echo -e "\n🚀 All steps complete. Please run 'filter_dropped.py' next."
 python3 filter_dropped.py
