@@ -127,14 +127,18 @@ echo -e "\nDEBUG: Displaying entries with missing TaxIDs ('0' or empty) before m
 awk -F '\t' '
 {
     if ($2 == "0" || $2 == "") print $0
-}' temp/HOMD_Refseq2taxid.tsv
+}' temp/HOMD_Refseq2taxid.tsv | sort -k1,1
 
 # --- STEP 5: Manually Fix Known Missing TaxIDs ---
 echo -e "\nSTEP 5: Manually fixing known missing TaxIDs..."
 
 # This is the main data cleaning step. It uses a series of if/else statements
-# to assign the correct, known TaxID to entries that are missing them in the
-# source HOMD data, based on their HMT-ID prefix.
+# to assign known NCBI TaxID to entries that are missing them in the
+# source HOMD data (NCBI Taxon ID = 0).
+## The mappings below were determined through manual research in NCBI Taxonomy database.
+## Bacterial name were searched in NCBI Taxonomy to find the correct TaxID.
+## When exact species match was not found, the closest higher taxonomic rank (genus) was used.
+## The taxIDs might need to be rechecked for accuracy.
 awk -F '\t' '
 {
     if ($1 ~ /^HMT-464/) $2 = "2686067"; # Fusobacterium watanabei
@@ -171,6 +175,7 @@ awk -F '\t' '
     else if ($1 ~ /^HMT-454/) $2 = "2913501"; # Corynebacterium macclintockiae
     else if ($1 ~ /^HMT-456/) $2 = "2382163"; # Streptococcus koreensis
     else if ($1 ~ /^HMT-460/) $2 = "2490855"; # Lachnoanaerobaculum gingivalis
+    else if ($1 ~ /^HMT-471/) $2 = "44737"; # Capnocytophaga sp. HMT-471 ; new in v16.03
     else if ($1 ~ /^HMT-710/) $2 = "3050224"; # Schaalia dentiphila
     else if ($1 ~ /^HMT-779/) $2 = "2630086"; # unclassified Veillonella
     else if ($1 ~ /^HMT-783/) $2 = "1979527"; # Corynebacterium kefirresidentii
@@ -178,9 +183,10 @@ awk -F '\t' '
     else if ($1 ~ /^HMT-789/) $2 = "33028"; # Staphylococcus saccharolyticus
     else if ($1 ~ /^HMT-791/) $2 = "1574624"; # Cutibacterium namnetense
     else if ($1 ~ /^HMT-792/) $2 = "1755241"; # Anaerococcus nagyae
-    else if ($1 ~ /^HMT-797/) $2 = "419005"; # Prevotella	amnii
+    else if ($1 ~ /^HMT-796/) $2 = "1913599"; # Peptoanaerobacter margaritiae; new in v16.03
+    else if ($1 ~ /^HMT-797/) $2 = "419005"; # Prevotella amnii
     else if ($1 ~ /^HMT-798/) $2 = "386414"; # Hoylesella timonensis (Prevotella timonensis)
-    else if ($1 ~ /^HMT-799/) $2 = "134821"; # Ureaplasma	parvum
+    else if ($1 ~ /^HMT-799/) $2 = "134821"; # Ureaplasma parvum
     else if ($1 ~ /^HMT-846/) $2 = "2792977"; # Gardnerella piotii
     else if ($1 ~ /^HMT-867/) $2 = "2792978"; # Gardnerella leopoldii
     else if ($1 ~ /^HMT-868/) $2 = "2792979"; # Gardnerella swidsinskii
@@ -198,13 +204,12 @@ awk -F '\t' '
     else if ($1 ~ /^HMT-971/) $2 = "971"; # Bacteroides	uniformis
     else if ($1 ~ /^HMT-972/) $2 = "371601"; # Bacteroides xylanisolvens 
     else if ($1 ~ /^HMT-973/) $2 = "823"; # Parabacteroides	distasonis
-    else if ($1 ~ /^HMT-978/) $2 = "821"; # Phocaeicola vulgatus
     else if ($1 ~ /^HMT-974/) $2 = "46503"; # Parabacteroides merdae
     else if ($1 ~ /^HMT-975/) $2 = "357176"; # Phocaeicola dorei
     else if ($1 ~ /^HMT-976/) $2 = "204516"; # Phocaeicola massiliensis
     else if ($1 ~ /^HMT-977/) $2 = "310297"; # Phocaeicola plebeius
     else if ($1 ~ /^HMT-978/) $2 = "821"; # Phocaeicola vulgatus
-    else if ($1 ~ /^HMT-979/) $2 = "165179"; # Prevotella	copri (Segatella)
+    else if ($1 ~ /^HMT-979/) $2 = "165179"; # Prevotella copri (Segatella)
     #else if ($1 ~ /^HMT-/) $2 = ""; # 
     print $1 "\t" $2
 }' temp/HOMD_Refseq2taxid.tsv > temp/HOMD_Refseq2taxid_fixed.tsv
@@ -223,12 +228,13 @@ awk -F '\t' '
 }' temp/HOMD_Refseq2taxid_fixed.tsv | sort -k1,1 > HOMD_Refseq2taxid_fixed2.tsv
 echo -e "\nINFO: Final mapping file 'HOMD_Refseq2taxid_fixed2.tsv' created."
 wc -l HOMD_Refseq2taxid_fixed2.tsv
-#> 6598
+#> 6600
 
 
 # This block is for iteratively checking if any missing TaxIDs remain after a fix.
 ### -----repeat the process until all "0" and empty taxid are fixed. ------------
 awk -F '\t' '
+BEGIN {zero_count=0; empty_count=0}
 {
     if ($2 == "0") {zero_count++}
     else if ($2 == "") {empty_count++}
@@ -237,15 +243,13 @@ END {
     print "zero_count: " zero_count
     print "empty_count: " empty_count
 }' temp/HOMD_Refseq2taxid_fixed.tsv
-#> zero_count: 2
+#> zero_count: 0
 #> empty_count: 0
 
 awk -F '\t' '
 {
     if ($2 == "0" || $2 == "") print $0
 }' temp/HOMD_Refseq2taxid_fixed.tsv | sort -k1,1
-#> HMT-471_16S006489       0
-#> HMT-796_16S003636       0
 
 ### ---------------------------------------------
 
@@ -258,7 +262,7 @@ awk -F '\t' '
 }' HOMD_Refseq2taxid_fixed.tsv | sort -k1,1 > temp/HOMD_16S_dropped_header.txt
 echo -e "\nINFO: Exclusion list 'temp/HOMD_16S_dropped_header.txt' created."
 wc -l temp/HOMD_16S_dropped_header.txt
-#> 29
+#> 0
 
 # --- Next Step ---
 # The workflow now passes control to the Python script to perform the FASTA filtering.
