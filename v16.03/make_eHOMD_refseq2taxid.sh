@@ -105,8 +105,8 @@ wc -l temp/5.Refseq_HMT_taxid.txt
 echo -e "\nSTEP 4: Creating initial mapping file and identifying missing data..."
 
 # Extract just the RefSeq ID (column 1) and the TaxID (column 5) to create the initial mapping table.
-awk  '{print $1 "\t" $5}' temp/5.Refseq_HMT_taxid.txt > temp/HOMD_Refseq2taxid.tsv
-wc -l temp/HOMD_Refseq2taxid.tsv
+awk  '{print $1 "\t" $5}' temp/5.Refseq_HMT_taxid.txt > temp/HOMD_Refseq2taxid_0.tsv
+wc -l temp/HOMD_Refseq2taxid_0.tsv
 #> 6600
 
 # Count how many entries in the initial mapping file have a missing TaxID (either "0" or empty).
@@ -118,7 +118,7 @@ awk -F '\t' '
 END {
     print "zero_count: " zero_count
     print "empty_count: " empty_count
-}' temp/HOMD_Refseq2taxid.tsv
+}' temp/HOMD_Refseq2taxid_0.tsv
 #> zero_count: 671
 #> empty_count: 
 
@@ -127,7 +127,7 @@ echo -e "\nDEBUG: Displaying entries with missing TaxIDs ('0' or empty) before m
 awk -F '\t' '
 {
     if ($2 == "0" || $2 == "") print $0
-}' temp/HOMD_Refseq2taxid.tsv | sort -k1,1
+}' temp/HOMD_Refseq2taxid_0.tsv | sort -k1,1
 
 # --- STEP 5: Manually Fix Known Missing TaxIDs ---
 echo -e "\nSTEP 5: Manually fixing known missing TaxIDs..."
@@ -212,9 +212,9 @@ awk -F '\t' '
     else if ($1 ~ /^HMT-979/) $2 = "165179"; # Prevotella copri (Segatella)
     #else if ($1 ~ /^HMT-/) $2 = ""; # 
     print $1 "\t" $2
-}' temp/HOMD_Refseq2taxid.tsv > temp/HOMD_Refseq2taxid_fixed.tsv
+}' temp/HOMD_Refseq2taxid_0.tsv > temp/HOMD_Refseq2taxid_1.tsv
 
-wc temp/HOMD_Refseq2taxid_fixed.tsv
+wc temp/HOMD_Refseq2taxid_1.tsv
 #> 6600
 
 # --- STEP 6: Generate Final Files ---
@@ -225,11 +225,10 @@ echo -e "\nSTEP 6: Generating final output files..."
 awk -F '\t' '
 {
     if ($2 != "0" && $2 != "") print $0
-}' temp/HOMD_Refseq2taxid_fixed.tsv | sort -k1,1 > HOMD_Refseq2taxid_fixed2.tsv
-echo -e "\nINFO: Final mapping file 'HOMD_Refseq2taxid_fixed2.tsv' created."
-wc -l HOMD_Refseq2taxid_fixed2.tsv
+}' temp/HOMD_Refseq2taxid_1.tsv | sort -k1,1 > HOMD_Refseq2taxid.tsv
+echo -e "\nINFO: Final mapping file 'HOMD_Refseq2taxid.tsv' created."
+wc -l HOMD_Refseq2taxid.tsv
 #> 6600
-
 
 # This block is for iteratively checking if any missing TaxIDs remain after a fix.
 ### -----repeat the process until all "0" and empty taxid are fixed. ------------
@@ -242,14 +241,14 @@ BEGIN {zero_count=0; empty_count=0}
 END {
     print "zero_count: " zero_count
     print "empty_count: " empty_count
-}' temp/HOMD_Refseq2taxid_fixed.tsv
+}' temp/HOMD_Refseq2taxid_1.tsv
 #> zero_count: 0
 #> empty_count: 0
 
 awk -F '\t' '
 {
     if ($2 == "0" || $2 == "") print $0
-}' temp/HOMD_Refseq2taxid_fixed.tsv | sort -k1,1
+}' temp/HOMD_Refseq2taxid_1.tsv | sort -k1,1
 
 ### ---------------------------------------------
 
@@ -259,7 +258,7 @@ awk -F '\t' '
 awk -F '\t' '
 {
     if ($2 == "") print $0
-}' HOMD_Refseq2taxid_fixed.tsv | sort -k1,1 > temp/HOMD_16S_dropped_header.txt
+}' HOMD_Refseq2taxid_1.tsv | sort -k1,1 > temp/HOMD_16S_dropped_header.txt
 echo -e "\nINFO: Exclusion list 'temp/HOMD_16S_dropped_header.txt' created."
 wc -l temp/HOMD_16S_dropped_header.txt
 #> 0
