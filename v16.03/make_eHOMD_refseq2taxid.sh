@@ -27,17 +27,17 @@ TAXON_TABLE_FILE="HOMD_download/HOMD_taxon_table2025-09-19_1758256465.txt"
 # --- Initialization ---
 # Create a temporary working directory if it doesn't exist
 mkdir -p temp
-echo "✅ Step 0: Temporary directory 'temp' is ready."
+echo -e "\n✅ Step 0: Temporary directory 'temp' is ready."
 
 
 # --- Preliminary Checks ---
 # (Informational) Count the total number of sequences in the input FASTA file.
-echo "INFO: Counting sequences in FASTA file..."
+echo -e "\nINFO: Counting sequences in FASTA file..."
 grep "^>" "$FASTA_FILE" | wc -l
 #> 6600
 
 # --- STEP 1: Extract and Format Sequence Headers from FASTA ---
-echo "STEP 1: Extracting and formatting sequence headers..."
+echo -e "\nSTEP 1: Extracting and formatting sequence headers..."
 
 # Extract only the header lines (starting with '>') from the input FASTA file.
 grep "^>" "$FASTA_FILE" > "./temp/1.fasta_header.txt"
@@ -61,7 +61,7 @@ wc -l temp/2.Refseq_HMT_number.txt
 
 
 # --- STEP 2: Process and Clean the Taxonomy Table ---
-echo "STEP 2: Processing and cleaning the taxonomy table..."
+echo -e "\nSTEP 2: Processing and cleaning the taxonomy table..."
 
 # (Informational) Count the total number of lines in the input taxonomy table.
 echo "INFO: Counting lines in taxonomy table..."
@@ -89,7 +89,7 @@ wc -l temp/4.HOMD_taxon_table.txt
 
 
 # --- STEP 3: Join Sequence Info with Taxonomy Info ---
-echo "STEP 3: Joining sequence and taxonomy data..."
+echo -e "\nSTEP 3: Joining sequence and taxonomy data..."
 
 # Use awk to join the two files based on the HMT number (column 2 in the second file).
 # It reads the taxonomy table (file 1) into memory as a lookup array.
@@ -102,7 +102,7 @@ wc -l temp/5.Refseq_HMT_taxid.txt
 #> 6600
 
 # --- STEP 4: Create Initial Mapping File & Identify Missing Data ---
-echo "STEP 4: Creating initial mapping file and identifying missing data..."
+echo -e "\nSTEP 4: Creating initial mapping file and identifying missing data..."
 
 # Extract just the RefSeq ID (column 1) and the TaxID (column 5) to create the initial mapping table.
 awk  '{print $1 "\t" $5}' temp/5.Refseq_HMT_taxid.txt > temp/HOMD_Refseq2taxid.tsv
@@ -142,7 +142,7 @@ awk -F '\t' '
 }' temp/HOMD_Refseq2taxid.tsv
 
 # --- STEP 5: Manually Fix Known Missing TaxIDs ---
-echo "STEP 5: Manually fixing known missing TaxIDs..."
+echo -e "\nSTEP 5: Manually fixing known missing TaxIDs..."
 
 # This is the main data cleaning step. It uses a series of if/else statements
 # to assign the correct, known TaxID to entries that are missing them in the
@@ -225,7 +225,7 @@ wc temp/HOMD_Refseq2taxid_fixed.tsv
 #> 6600
 
 # --- STEP 6: Generate Final Files ---
-echo "STEP 6: Generating final output files..."
+echo -e "\nSTEP 6: Generating final output files..."
 
 # Create the final, clean mapping file by removing any entries that *still*
 # have a missing TaxID after the manual fix, and then sorting the result.
@@ -233,7 +233,7 @@ awk -F '\t' '
 {
     if ($2 != "0" && $2 != "") print $0
 }' temp/HOMD_Refseq2taxid_fixed.tsv | sort -k1,1 > HOMD_Refseq2taxid_fixed2.tsv
-echo "INFO: Final mapping file 'HOMD_Refseq2taxid_fixed2.tsv' created."
+echo -e "\nINFO: Final mapping file 'HOMD_Refseq2taxid_fixed2.tsv' created."
 wc -l HOMD_Refseq2taxid_fixed2.tsv
 #> 6598
 
@@ -268,11 +268,11 @@ awk -F '\t' '
 {
     if ($2 == "") print $0
 }' HOMD_Refseq2taxid_fixed.tsv | sort -k1,1 > temp/HOMD_16S_dropped_header.txt
-echo "INFO: Exclusion list 'temp/HOMD_16S_dropped_header.txt' created."
+echo -e "\nINFO: Exclusion list 'temp/HOMD_16S_dropped_header.txt' created."
 wc -l temp/HOMD_16S_dropped_header.txt
 #> 29
 
 # --- Next Step ---
 # The workflow now passes control to the Python script to perform the FASTA filtering.
-echo "🚀 All steps complete. Please run 'filter_dropped.py' next."
+echo -e "\n🚀 All steps complete. Please run 'filter_dropped.py' next."
 python3 filter_dropped.py
