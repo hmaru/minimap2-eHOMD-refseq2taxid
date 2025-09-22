@@ -109,18 +109,6 @@ awk  '{print $1 "\t" $5}' temp/5.Refseq_HMT_taxid.txt > temp/HOMD_Refseq2taxid.t
 wc -l temp/HOMD_Refseq2taxid.tsv
 #> 6600
 
-##--TEMP--
-## zero values in the taxid column caused error when runnning wf-16S
-## temporary, replaced "0" with "69014" (Thermococcus kodakarensis) in the taxid column
-awk -F '\t' '{
-    if ($2 == "0") $2 = "69014"; 
-    print $1 "\t" $2
-}' temp/HOMD_Refseq2taxid.tsv > temp/HOMD_Refseq2taxid_fake_Thermococcus_test.tsv
-wc temp/HOMD_Refseq2taxid_fake_Thermococcus_test.tsv
-#> 6600
-## there are also empty taxid. manually fixed. script should be fixed.
-##---------
-
 # Count how many entries in the initial mapping file have a missing TaxID (either "0" or empty).
 awk -F '\t' '
 {
