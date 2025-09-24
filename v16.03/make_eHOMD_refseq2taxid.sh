@@ -268,3 +268,5 @@ wc -l temp/HOMD_16S_dropped_header.txt
 # If there are no entries in the exclusion list, this step is not needed.
 echo -e "\n🚀 All steps complete. Please run 'filter_dropped.py' next."
 python3 filter_dropped.py
+# when running in powershell on Windows, use:
+#python filter_dropped.py
